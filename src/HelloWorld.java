@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static java.lang.Math.pow;
-x
+xy
 public class HelloWorld {
     public static void main (String[] args) {
         Car car1 = new Car("yellow", 100, "Erel");
