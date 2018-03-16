@@ -10,7 +10,7 @@ public class HighscoreBoard {
         String str;
         while ((str = reader.readFromFile()) != null) {
             String[] splited = str.split("\t");
-            Player player = new Player()
+            Player player = new Player(splited[0],Integer.getInteger(splited[1]));
         }
 
     }
