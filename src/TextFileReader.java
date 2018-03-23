@@ -17,6 +17,9 @@ public class TextFileReader {
 
     }
     public String readFromFile(){
+        if (reader == null) {
+            return null;
+        }
         try {
             return reader.readLine();
         } catch (IOException e) {
@@ -26,6 +29,9 @@ public class TextFileReader {
 
     }
     public void closeFile(){
+        if (reader == null) {
+            return;
+        }
         try {
             reader.close();
         } catch (IOException e) {
