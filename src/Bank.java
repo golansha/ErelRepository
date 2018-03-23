@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Bank {
     String fileName;
+    int noteNum = 0;
     List<Lakoach> lakoaches = new ArrayList<>();
     public Bank(String path){
         TextFileReader reader = new TextFileReader(path);
@@ -16,12 +17,26 @@ public class Bank {
         }
     }
     public int OpenAccount(String name){
-        return 0;
+        int lacouchNum = noteNum;
+        noteNum++;
+        lakoaches.add(new Lakoach(name, lacouchNum, 0));
+        return lacouchNum;
     }
     public boolean OdMoney(int lakoachNum, int money){
+        boolean found = false;
+        for (Lakoach lakoach : lakoaches){
+            if (lakoachNum == lakoach.lakoachNum){
+                found = true;
+                lakoach.money = lakoach.money + money;
+            }
+            else {
+
+            }
+        }
         return true;
     }
     public boolean PachotMoney(int lakoachNum, int money){
+
         return true;
     }
     public void MadpisHeshbonot(){
